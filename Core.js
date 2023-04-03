@@ -1189,7 +1189,7 @@ let cron = require('node-cron')
                                 "h": `Miku`,
                                 'duration': '99999', 
                                 'gifPlayback': 'true', 
-                                'caption': `Fantox`,
+                                'caption': `ᴅᴇᴇᴘ ᴇᴀɢʟᴇ`,
                                 'jpegThumbnail': fs.readFileSync('./Assets/miku.mp4')
                                        }
                                       }
@@ -1334,7 +1334,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Fantox to take your WhatsApp usage into next level.
+    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: ᴅᴇᴇᴘ ᴇᴀɢʟᴇ to take your WhatsApp usage into next level.
         
        「 System Info 」
     
@@ -1364,7 +1364,7 @@ const ftroli = {
     
     Type *-menu* or press any button below to start using *${global.BotName}*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *Fantox*
+    ©️ *${global.BotName}* All Rights Reserved by: *ᴅᴇᴇᴘ ᴇᴀɢʟᴇ*
     `
         const qtod = m.quoted? "true":"false"
         
@@ -1386,7 +1386,7 @@ return list[Math.floor(list.length * Math.random())]
     }
    
     if (smallinput=='bot') {
-      reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Fantox* and currently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
+      reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *ᴅᴇᴇᴘ ᴇᴀɢʟᴇ* and currently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
     if (smallinput=='lol') {
@@ -1426,7 +1426,7 @@ switch(command) {
     buttons: buttons,
     headerType: 4,
     /*contextInfo:{externalAdReply:{
-    title:"Powered by Fantox",
+    title:"Powered by ᴅᴇᴇᴘ ᴇᴀɢʟᴇ",
     body: " ", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
@@ -1829,7 +1829,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
- let teks = ` 「  Miku's pm user list  」\n\nTotal ${anu.length} users are using Miku in personal chat.`
+ let teks = ` 「  Miku's pm user list  」\n\nTotal ${anu.length} users are using Qᴜᴇᴇɴ ʜᴇʀᴏin personal chat.`
  for (let i of anu) {
   teks += `\n\nProfile : @${i.id.split('@')[0]}\nChat : ${i.unreadCount}\nLastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
  }
@@ -3348,7 +3348,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Miku Youtube Player 2.0_  」
+ caption: `「  _Qᴜᴇᴇɴ ʜᴇʀᴏYoutube Player 2.0_  」
 
 *Title :* ${anu.title}
 
@@ -3376,13 +3376,13 @@ case 'music': case 'play': case 'song': case 'ytplay': {
         }
         let urlYt = args[0];
         if (!urlYt.startsWith("http")) {
-          reply(`❌ Give youtube link!`);
+          reply(`❌ යූ ටියුබ් ලින්ක් එක දෙන්න!`);
           return;
         }
         let infoYt = await ytdl.getInfo(urlYt);
         //30 MIN
         if (infoYt.videoDetails.lengthSeconds >= 1800) {
-          reply(`❌ Video too big!`);
+          reply(`❌ වීඩියෝව විශාල වැඩියි!`);
           return;
         }
         let titleYt = infoYt.videoDetails.title;
@@ -3391,7 +3391,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
         const stream = ytdl(urlYt, {
           filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
         }).pipe(fs.createWriteStream(`./${randomName}`));
-        console.log("Audio downloading ->", urlYt);
+        console.log("සින්දුව බාගත කිරීම⬇️ ->", urlYt);
         // reply("Downloading.. This may take upto 5 min!");
         await new Promise((resolve, reject) => {
           stream.on("error", reject);
@@ -3414,7 +3414,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
             { quoted:m }
           );
         } else {
-          m.reply(`❌ File size bigger than 40mb.`);
+          m.reply(`❌ ගොනු ප්‍රමාණය 40mb ට වඩා විශාලයි.`);
         }
        fs.unlinkSync(`./${randomName}`);
     }
@@ -3429,13 +3429,13 @@ break
         }
         let urlYt = args[0];
         if (!urlYt.startsWith("http")) {
-          m.reply(`❌ Give youtube link!`);
+          m.reply(`❌ යූ ටියුබ් ලින්ක් එක දෙන්න!`);
           return;
         }
         let infoYt = await ytdl.getInfo(urlYt);
         //30 MIN
         if (infoYt.videoDetails.lengthSeconds >= 1800) {
-          m.reply(`❌ Video file too big!`);
+          m.reply(`❌ වීඩියෝ ගොනුව විශාල වැඩියි!`);
           return;
         }
         let titleYt = infoYt.videoDetails.title;
@@ -3445,7 +3445,7 @@ break
           filter: (info) => info.itag == 22 || info.itag == 18,
         }).pipe(fs.createWriteStream(`./${randomName}`));
         //22 - 1080p/720p and 18 - 360p
-        console.log("Video downloading ->", urlYt);
+        console.log("වීඩියෝ බාගත කරනවා ⬇️->", urlYt);
         // reply("Downloading.. This may take upto 5 min!");
         await new Promise((resolve, reject) => {
           stream.on("error", reject);
@@ -3467,7 +3467,7 @@ break
             { quoted: m }
           );
         } else {
-          m.reply(`❌ File size bigger than 40mb.`);
+          m.reply(`❌ ගොනු ප්‍රමාණය 40mb ට වඩා විශාලයි.`);
         }
       
         fs.unlinkSync(`./${randomName}`);
@@ -3490,7 +3490,7 @@ break
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Miku Youtube Downloader 2.0_  」
+ caption: `「  _Deep Eagle Youtube Downloader 2.0_  」
 
 *Title :* ${anu.title}
 
@@ -3514,7 +3514,7 @@ break
     const ytmp4play2 = await YT.mp4(text)
     let vidduration =ytmp4play2.duration;
     if (vidduration > 1800) return reply('Cant send videos longer than *30 min*')
- Miku.sendMessage(from, {video:{url:ytmp4play2.videoUrl}, mimetype:"video/mp4", caption:'Downloaded by *Miku MD*',}, {quoted:m})
+ Miku.sendMessage(from, {video:{url:ytmp4play2.videoUrl}, mimetype:"video/mp4", caption:'Downloaded by *Qᴜᴇᴇɴ ʜᴇʀᴏ*',}, {quoted:m})
  }
  break
 
@@ -3564,7 +3564,7 @@ case 'pinterest': case 'pin': {
 case 'swm': case 'take': case 'stickerwm': case 'steal':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply(`Use command: -steal Miku|By: Fantox`)
+if (!args.join(" ")) return reply(`Use command: -steal Miku|By: ᴅᴇᴇᴘ ᴇᴀɢʟᴇ`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -3691,7 +3691,7 @@ break
 case 'handsomecheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @ᴅᴇᴇᴘ ᴇᴀɢʟᴇ`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
@@ -3699,7 +3699,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*
 case 'beautifulcheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @ᴅᴇᴇᴘ ᴇᴀɢʟᴇ`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
@@ -3716,7 +3716,7 @@ case 'awesomecheck':
                       case 'uglycheck':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @ᴅᴇᴇᴘ ᴇᴀɢʟᴇ`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
@@ -3726,7 +3726,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%
 case 'charactercheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @ᴅᴇᴇᴘ ᴇᴀɢʟᴇ`)
 					const Mikutttt =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
@@ -3806,7 +3806,7 @@ case 'charactercheck':
          "shout you bastard in front of your mom/papa",
          "change the name to i am idiot for 24 hours",
          "slap urself firmly and send the sound of slap through voice note😂",
-         "say i love the bot owner Fantox through voice note",
+         "say i love the bot owner ᴅᴇᴇᴘ ᴇᴀɢʟᴇ through voice note",
          "send your gf/bf pic here",
          "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
          "breakup with your best friend for 5hrs without telling him/her that its a dare",
@@ -3898,7 +3898,7 @@ case 'truth':
                  "Mention the incident that makes you hurt that you still remember",
                  "what achievements have you got this year?",
                  "what was your worst habit at school?",
-                 "do you love the bot creator Fantox?",
+                 "do you love the bot creator ᴅᴇᴇᴘ ᴇᴀɢʟᴇ?",
                  "have you ever thought of taking revenge from ur teacher?",
                  "do you like current prime minister of ur country",
                  "you non veg or veg",
@@ -4795,7 +4795,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+I am *Qᴜᴇᴇɴ ʜᴇʀᴏ*, WhatsApp use a bot developed by *ᴅᴇᴇᴘ ᴇᴀɢʟᴇ*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4869,7 +4869,7 @@ qr, say, translate, fliptext, toletter, weather
 
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
+ Powered by: *Queen Hero*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
